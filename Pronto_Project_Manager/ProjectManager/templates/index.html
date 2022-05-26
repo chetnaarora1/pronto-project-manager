@@ -21,7 +21,18 @@
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
+	<script>
+		function loginFunction(){
+			var un = document.forms["login"]["email"].value;
+			var pw = document.forms["login"]["password"].value;
+			if (un==="admin@xyz" && pw==="1234") {
+				window.location.href="admin-dashboard.html";
+				console.log("success");
+			} else {
+				alert("Invalid Credentials");
+			}
+		}
+	</script>
 	<style>
 		body {
 			background-image: url("../static/assets/img/login-bg.png");
@@ -125,7 +136,7 @@
 		</div>
 		<div id="user-login" class="form">
 			<h2>User</h2>
-			<form>
+			<form name="login" method="post">
 				<label for="email">Email Address*</label>
 				<br>
 				<input type="email" name="email" placeholder="admin@dreamguys.in" required>
@@ -138,7 +149,7 @@
 					<p id="forget-password">Forgot Password?</p>
 				</a>
 
-				<input type="submit" value="Login" class="btn">
+				<input type="button" value="Login" class="btn" onclick="loginFunction()">
 
 			</form>
 
