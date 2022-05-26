@@ -7,6 +7,17 @@
 <html lang="en">
 
 <head>
+	<!-- Favicon -->
+	<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+	<!-- Fontawesome CSS -->
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+	<!-- Main CSS -->
+	<link rel="stylesheet" href="assets/css/style.css">
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -80,35 +91,63 @@
 	<div class="row">
 		<div class="col-md-6 login-form-1">
 			<h3>User</h3>
-			<form>
+			<form action="admin-dashboard.html">
 				<div class="form-group">
-					<input type="text" class="form-control" placeholder="Your Email *" value="hello" />
+					<label>Email Address</label>
+					<input class="form-control" type="text" value="admin@dreamguys.in">
 				</div>
 				<div class="form-group">
-					<input type="password" class="form-control" placeholder="Your Password *" value="" />
+					<div class="row">
+						<div class="col">
+							<label>Password</label>
+						</div>
+						<div class="col-auto">
+							<a class="text-muted" href="forgot-password.html">
+								Forgot password?
+							</a>
+						</div>
+					</div>
+					<div class="position-relative">
+						<input class="form-control" type="password" value="123456" id="password">
+						<span class="fa fa-eye-slash" id="toggle-password"></span>
+					</div>
 				</div>
-				<div class="form-group">
-					<input type="submit" class="btnSubmit" value="Login" />
+				<div class="form-group text-center">
+					<button class="btn btn-primary account-btn" type="submit">Login</button>
 				</div>
-				<div class="form-group">
-					<a href="#" class="ForgetPwd">Forget Password?</a>
+				<div class="account-footer">
+					<p>Don't have an account yet? <a href="register.html">Register</a></p>
 				</div>
 			</form>
 		</div>
 		<div class="col-md-6 login-form-2">
 			<h3>Service Provider</h3>
-			<form>
+			<form action="admin-dashboard.html">
 				<div class="form-group">
-					<input type="text" class="form-control" placeholder="Your Email *" value="360@prontoservices.com" />
+					<label>Email Address</label>
+					<input class="form-control" type="text" value="admin@dreamguys.in">
 				</div>
 				<div class="form-group">
-					<input type="password" class="form-control" placeholder="Your Password *" value="12345" />
+					<div class="row">
+						<div class="col">
+							<label>Password</label>
+						</div>
+						<div class="col-auto">
+							<a class="text-muted" href="forgot-password.html">
+								Forgot password?
+							</a>
+						</div>
+					</div>
+					<div class="position-relative">
+						<input class="form-control" type="password" value="123456" id="password">
+						<span class="fa fa-eye-slash" id="toggle-password"></span>
+					</div>
 				</div>
-				<div class="form-group">
-					<input type="submit" class="btnSubmit" value="Login" />
+				<div class="form-group text-center">
+					<button class="btn btn-primary account-btn" type="submit">Login</button>
 				</div>
-				<div class="form-group">
-					<a href="#" class="ForgetPwd" value="Login">Forget Password?</a>
+				<div class="account-footer">
+					<p>Don't have an account yet? <a href="register.html">Register</a></p>
 				</div>
 			</form>
 		</div>
