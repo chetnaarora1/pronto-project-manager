@@ -21,146 +21,148 @@
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 	<style>
-		.login-container {
-			margin-top: 5%;
-			margin-bottom: 5%;
+		body {
+			background-image: url("../static/assets/img/login-bg.png");
+			
+			background-color: aliceblue;
+		
 		}
 
-		.login-form-1 {
-			padding: 5%;
-			box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+		.main-container {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
 		}
 
-		.login-form-1 h3 {
-			text-align: center;
-			color: #333;
+		.btn-row {
+			width: 440px;
+			padding: 5px;
+			background-color: white;
 		}
 
-		.login-form-2 {
-			padding: 5%;
-			background: #0062cc;
-			box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
-		}
-
-		.login-form-2 h3 {
-			text-align: center;
-			color: #fff;
-		}
-
-		.login-container form {
-			padding: 10%;
-		}
-
-		.btnSubmit {
-			width: 50%;
-			border-radius: 1rem;
-			padding: 1.5%;
-			border: none;
+		.btn-row button {
+			width: 49%;
 			cursor: pointer;
+			border: none;
+			outline: none;
+			padding: 10px 20px;
+			font-weight: 500;
+			background-color: rgb(201, 229, 255);
+			margin-bottom: 2px;
 		}
 
-		.login-form-1 .btnSubmit {
-			font-weight: 600;
-			color: #fff;
-			background-color: #0062cc;
+		.btn-row .selected {
+			border-bottom: 7px solid blue;
+			background-color: rgb(101, 193, 255);
 		}
 
-		.login-form-2 .btnSubmit {
-			font-weight: 600;
-			color: #0062cc;
-			background-color: #fff;
+		.form {
+			background-color: white;
+			padding: 35px;
+			box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
+		
+			width: 440px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			height: 500px;
 		}
 
-		.login-form-2 .ForgetPwd {
-			color: #fff;
-			font-weight: 600;
-			text-decoration: none;
+		#sign-up {
+			text-align: center;
 		}
 
-		.login-form-1 .ForgetPwd {
-			color: #0062cc;
-			font-weight: 600;
-			text-decoration: none;
+		input {
+			padding: 5px 10px;
+			width: 100%;
+			outline-color: rgb(101, 193, 255);
 		}
-	</Style>
+
+		form {
+			width: 70%;
+			margin-top: 20px;
+		}
+
+		#forget-password {
+			text-align: right;
+		}
+
+		.btn {
+			background-color: rgb(101, 193, 255);
+			margin-bottom: 20px;
+		}
+
+		.btn:hover {
+			background-color: rgb(31, 165, 255);
+		}
+
+		.line {
+			width: 70%;
+			height: 0.5px;
+			background-color: rgb(157, 157, 157);
+			margin-bottom: 10px;
+		}
+
+
+
+	</style>
 
 	<!------ Include the above in your HEAD tag ---------->
 </head>
-<div class="container login-container">
-	<div class="row">
-		<div class="col-md-6 login-form-1">
-			<h3>User</h3>
-			<form action="admin-dashboard.html">
-				<div class="form-group">
-					<label>Email Address</label>
-					<input class="form-control" type="text" value="admin@dreamguys.in">
-				</div>
-				<div class="form-group">
-					<div class="row">
-						<div class="col">
-							<label>Password</label>
-						</div>
-						<div class="col-auto">
-							<a class="text-muted" href="forgot-password.html">
-								Forgot password?
-							</a>
-						</div>
-					</div>
-					<div class="position-relative">
-						<input class="form-control" type="password" value="123456" id="password">
-						<span class="fa fa-eye-slash" id="toggle-password"></span>
-					</div>
-				</div>
-				<div class="form-group text-center">
-					<button class="btn btn-primary account-btn" type="submit">Login</button>
-				</div>
-				<div class="account-footer">
-					<p>Don't have an account yet? <a href="register.html">Register</a></p>
-				</div>
-			</form>
+
+<body>
+
+	<div class="main-container">
+		
+		<div class="btn-row">
+			<a href="#"><button class="selected">User</button></a>
+			<a href="index1.html"><button>Service Provider</button></a>
 		</div>
-		<div class="col-md-6 login-form-2">
-			<h3>Service Provider</h3>
-			<form action="admin-dashboard.html">
-				<div class="form-group">
-					<label>Email Address</label>
-					<input class="form-control" type="text" value="admin@dreamguys.in">
-				</div>
-				<div class="form-group">
-					<div class="row">
-						<div class="col">
-							<label>Password</label>
-						</div>
-						<div class="col-auto">
-							<a class="text-muted" href="forgot-password.html">
-								Forgot password?
-							</a>
-						</div>
-					</div>
-					<div class="position-relative">
-						<input class="form-control" type="password" value="123456" id="password">
-						<span class="fa fa-eye-slash" id="toggle-password"></span>
-					</div>
-				</div>
-				<div class="form-group text-center">
-					<button class="btn btn-primary account-btn" type="submit">Login</button>
-				</div>
-				<div class="account-footer">
-					<p>Don't have an account yet? <a href="register.html">Register</a></p>
-				</div>
+		<div id="user-login" class="form">
+			<h2>User</h2>
+			<form>
+				<label for="email">Email Address*</label>
+				<br>
+				<input type="email" name="email" placeholder="admin@dreamguys.in" required>
+				<br>
+				<br>
+				<label for="password">Password*</label>
+				<br>
+				<input type="password" name="password" placeholder="••••••" required>
+				<a href="#">
+					<p id="forget-password">Forget Password?</p>
+				</a>
+
+				<input type="submit" value="Login" class="btn">
+
 			</form>
+
+			<p id="sign-up">Don't have an account yet? <a href="#"> Rgister </a>
+			<div class="line"></div>
+			* fields are mandatory
+			</p>
+			<!-- form ends here -->
 		</div>
+	
 	</div>
-</div>
 
-<!-- /Main Wrapper -->
 
-<!-- jQuery -->
-<script src="{% static 'assets/js/jquery-3.6.0.min.js' %}"></script>
+	<!-- /Main Wrapper -->
 
-<!-- Bootstrap Core JS -->
-<script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
 
-<!-- Custom JS -->
-<script src="{% static 'assets/js/app.js' %}"></script>
+	<!-- jQuery -->
+	<script src="{% static 'assets/js/jquery-3.6.0.min.js' %}"></script>
+
+	<!-- Bootstrap Core JS -->
+	<script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+
+	<!-- Custom JS -->
+	<script src="{% static 'assets/js/app.js' %}"></script>
+</body>
+
+</html>
