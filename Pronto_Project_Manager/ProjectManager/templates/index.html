@@ -132,7 +132,7 @@
 		
 		<div class="btn-row">
 			<a href="#"><button class="selected">User</button></a>
-			<a href="index1.html"><button>Service Provider</button></a>
+			<a href="{% url 'service_provider' %}"><button>Service Provider</button></a>
 		</div>
 		<div id="user-login" class="form">
 			<h2>User</h2>
@@ -146,14 +146,14 @@
 				<br>
 				<input type="password" name="password" placeholder="••••••" required>
 				<a href="#">
-					<p id="forget-password">Forget Password?</p>
+					<p id="forget-password">Forgot Password?</p>
 				</a>
 
 				<input type="button" value="Login" class="btn" onclick="loginFunction()">
 
 			</form>
 
-			<p id="sign-up">Don't have an account yet? <a href="#"> Rgister </a>
+			<p id="sign-up">Don't have an account yet? <a href="#"> Register </a>
 			<div class="line"></div>
 			* fields are mandatory
 			</p>
